@@ -1,0 +1,43 @@
+.navbar {
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 10px;
+    overflow-x: hidden;
+    
+}
+
+.navbar > a > img {
+    width: 55px;
+    height: 55px;
+}
+
+.navbar > a > img:hover {
+    transform: scale(0.98);
+}
+
+.options {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+li{
+    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+    color:black;
+    font-weight: bold;
+}
+
+li:hover{
+  border: solid black;
+  border-color: black;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
