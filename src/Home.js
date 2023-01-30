@@ -18,7 +18,7 @@ function Home() {
         setIndex(index + 1);
       }, 40)
     }
-  }, [index,fullText]);
+  }, [index,setText, setIndex]);
   return (
     <>
       <h1>
