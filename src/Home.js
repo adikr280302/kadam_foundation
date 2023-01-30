@@ -1,27 +1,23 @@
-import React from 'react'
 import "./Home.css"
 import banners from "./banners"
 import Carousel from "react-elastic-carousel"
 import { nanoid } from 'nanoid'
 import {useState, useEffect} from "react"
-
+const fullText= "Kadam Foundation is an NGO established in 2015. We have been helping needy children since then by providing food, clothes, and other helpful things. We stood strong in difficult situations like COVID-19 and did continuous service. We believe your support would help us to create a better world as children are our future.";
 function Home() {
   const [text, setText] = useState("");
-  const fullText= useState(
-    "Kadam Foundation is an NGO established in 2015. We have been helping needy children since then by providing food, clothes, and other helpful things. We stood strong in difficult situations like COVID-19 and did continuous service. We believe your support would help us to create a better world as children are our future."
-  )[0];
   const [index, setIndex] = useState(0);
-  const doX = (i) => {
-        setText(text + fullText[i]);
-        setIndex(i + 1);
-  }
+  const [ok, setOk] = useState(true);
   useEffect(() => {
-    if (index < fullText.length) {
+    if (index < fullText.length && ok) {
+      setOk(false);
       setTimeout(() => {
-        doX(index);
-      }, 40)
+        setText(text + fullText[index]);
+        setIndex(index + 1);
+        setOk(true);
+      }, 60)
     }
-  }, [index,fullText]);
+  }, [index,ok,text]);
   return (
     <>
       <h1>
