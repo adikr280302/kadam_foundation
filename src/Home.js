@@ -11,14 +11,17 @@ function Home() {
     "Kadam Foundation is an NGO established in 2015. We have been helping needy children since then by providing food, clothes, and other helpful things. We stood strong in difficult situations like COVID-19 and did continuous service. We believe your support would help us to create a better world as children are our future."
   )[0];
   const [index, setIndex] = useState(0);
+  const doX = (i) => {
+        setText(text + fullText[i]);
+        setIndex(i + 1);
+  }
   useEffect(() => {
     if (index < fullText.length) {
       setTimeout(() => {
-        setText(text + fullText[index]);
-        setIndex(index + 1);
+        doX(index);
       }, 40)
     }
-  }, [index,setText, setIndex]);
+  }, [index,fullText]);
   return (
     <>
       <h1>
