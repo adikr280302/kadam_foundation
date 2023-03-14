@@ -20,6 +20,11 @@ function Home() {
   }, [index,ok,text]);
   return (
     <>
+      <h3>
+        Registration Number:- 818/2019
+        <br/>
+        Registered under:- Section 8 of Companies Act, 2013
+      </h3>
       <h1>
         {text}
       </h1>

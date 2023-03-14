@@ -13,7 +13,7 @@ function Contact() {
           </h1> 
           <br />
           <h1>
-              Phone number: 9505555999
+              Phone number: +91-9505555999
           </h1>
           <h1>
           <a href="https://www.facebook.com/kadamfoundationofficial">
